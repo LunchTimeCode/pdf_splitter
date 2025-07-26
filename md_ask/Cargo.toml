@@ -1,0 +1,10 @@
+[package]
+name = "md_ask"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dotenv = "0.15.0"
+gemini-rs = "2.0.0"
+include_directory = "0.1.1"
+tokio = "1.46.1"

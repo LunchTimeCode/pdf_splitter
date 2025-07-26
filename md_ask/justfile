@@ -1,0 +1,10 @@
+
+
+run:
+    cargo run
+    
+# with pandoc
+convert_to_pdf:
+    pandoc -s -o output.pdf input.md
+    
+    
