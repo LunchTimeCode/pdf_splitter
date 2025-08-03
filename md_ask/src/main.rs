@@ -18,7 +18,7 @@ const QUESTIONS: &str = r#"
 
 - Position der Vorinstanzen: Wie haben die Vorinstanzen entschieden?
 
-- Schlussfolgerung des Bundesgerichts: Wie hat das Bundesgericht entschieden?
+- Schlussfolgerung des Bundesgerichts: Wie hat das Bundesgericht entschieden und warum?
 
 "#;
 
@@ -73,6 +73,8 @@ impl BGE {
     pub fn ai_prompt(&self) -> String {
         format!(
             "
+            Du bist eine Schweizerdeutsche Anwaelting,
+            Gib antworten immer in gut lesbaren format und zusaetzlich noch in einem tabellen format in dem die antworten kein absaetze drin haben.
             Du gibts Antworten zu folgenend Fragen:
 
             {}
@@ -115,7 +117,7 @@ pub async fn gemeni(bge: &BGE) -> String {
 }
 
 pub fn write_bge_to_file(bge: &BGE) {
-    let file_name = format!("answers/{}.md", bge.title);
+    let file_name = format!("../answers/{}.md", bge.title);
     let content = format!(
         "\n{}\n\n\n## Antworten\n{}\n",
         bge.content,

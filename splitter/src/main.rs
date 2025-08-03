@@ -300,14 +300,35 @@ fn main() {
             171,
             "Kreditkarten_Fall".to_string(),
         ),
-        // BGE 135 III 1 ff. („Die ungewöhnlichen Versicherungsbedingungen")
         PDFPath::new(
             in_path.to_string(),
             out_path.to_string(),
-            172,
-            180,
-            "Ungewoehnliche_Versicherungsbedingungen".to_string(),
+            163,
+            166,
+            "Liegenschaftsschaetzer_Fall".to_string(),
         ),
+        PDFPath::new(
+            in_path.to_string(),
+            out_path.to_string(),
+            181,
+            186,
+            "Die Praxis uebernahm 2".to_string(),
+        ),
+        PDFPath::new(
+            in_path.to_string(),
+            out_path.to_string(),
+            187,
+            190,
+            "Asbestschaeden".to_string(),
+        ),
+        PDFPath::new(
+            in_path.to_string(),
+            out_path.to_string(),
+            188,
+            193,
+            "Das widerrufbase Haustuergeschaeft".to_string(),
+        ),
+        // BGE 135 III 1 ff. („Die ungewöhnlichen Versicherungsbedingungen")
     ];
 
     paths.iter().for_each(|p| p.split().unwrap());
